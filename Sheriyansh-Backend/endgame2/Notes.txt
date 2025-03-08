@@ -1,0 +1,225 @@
+What is Backend?
+backend developer wah banda hai jo ki server and data base program karta ho.
+
+Why Backend?
+to make website more usable and purposeful for the audience, to make website dynamic.
+
+Why Not frontend alone?
+with frontend website are static and they are of not much use.
+
+What do we need ?
+Nodejs, Mongodb, mongoosejs, expressjs etc..
+
+what should we make to hit big companies?
+-->
+
+--> install ka matlab hota hai aapke laptop/computer/tablet usmein files ko copy karna.
+
+--> Nodejs hai khoob saara c++ ka code jo ki liya gya hai chrome browser ke V8 engine ke code se aur is c++  code jisko liya gya hai usey wrap kar diya gya hai javascript code se and ye hume allow karta hai ke hum javascript code likhein aur ye js code accept karega and C++ ka basis par apko ek server environment bana kar dega, par sirf tab tak jab tak ki ye code chalaya jayega.(V8 engine and js wrapper).
+
+--> NPM : node package manager
+//PAckages : files of code.
+// npm ko node ka playstore samajho.
+//npm ek jagah jaha par khub sare packages milte hai.
+// Package : bani banai chize ya features kehlate hai packages.
+eg : text --> Voice 
+// npm par ek packages milega jo ki text to voice convert kar dega.
+
+NPM Usage : 
+--> npm se kuchh install
+--> npm i package name
+--> install
+--> use
+--> How to print.
+
+# Express 
+--> express framework for node js
+--> express ka use case => routing
+--> Routing : 
+// https://www.facebook.com/profile
+// https://www.facebook.com/profile/bikash
+// https://www.facebook.com/profile/bikash/image
+--> int the above line base url https://www.facebook.com iske bad jitna bhi / ayega sab routing kahlata hai.
+==>> Types of routing : 
+--> GET, POST, PUT, FETCH, DELETE etc..
+
+--> Get : url me data dikh jata hai. Route me data dikhta hai.
+--> Post : url me data nhi dikhta hai.Route me data nhi dikhta hai.
+
+--> we know the base url of facebook is https://www.facbook.com is the base url but the actually twist is base url of facebook is https://www.facebook.com/ is the base url.
+
+# Nodemon :
+--> npm i nodemon -g to install nodemon globally 
+--> after intallation of it you have to save the file only.
+
+# Middleware : 
+--> koi bhi route se pahle chalta ho use middleware kahte hai.
+
+--> hot to use it : 
+app.use(function(req, res, next) {
+    console.log("A new request received at " + Date.now());
+    next();
+});
+--> middlewareek aisa function hai jo kisi bhi route se pahle chlta hai, jiska matlab apka route chalne se pahle agar koi kam karan chahte ho to middleware ka upyog kiya jaa sakta hai.
+
+--> iska matlab route chalne se pahle jo chalta hai usse middleware kahte hai.
+
+--> sirk ek dikat hai agar humara middleware chal gya to request jam ho jata hai aur route tak nhi pahuch pata hai.
+
+--> islye humlog next();  function  ko use karte hai request ko push karne k liye.
+--> express behind the scene HTTP ko use karta hai server banane k liye.
+
+--> humlog node js se bhi server bana sakte using HTTP lekin it gets very difficult to make it that wise we are using expressjs.
+
+--> HTTP ka code long and difficult to write or understand hota hai.
+
+--> thatwise use npm packages called expressjs to make server and it ise easier to write hota hai.
+
+--> node is the main thing express ke code se hum server ka code likh pate and server react karega wo bhi express ka help se likhte hai.
+
+# What is express js ?
+--> packages , routing 
+
+# Why express js ?
+--> http is difficult to use, express makes this easier.
+# Routing : 
+--> routes banae k process ko hum routing kahte hai.
+
+--> node ke sath ek dikkat hai ki agar control ek bar bhi kisi middlewre par gaya to control khud se agle route/middleware par nhi jayega, use agle par le jane k liye apko push karna padega aur ye push kahalyega next ko chalana.
+
+# Request and Response : 
+--> req me sara data hota hai aane wale user ki request ki taraf ka, jaise ki uski location, device info and other things, res me controls hote hai jinke basis pe hum server se response bhej pate hai. Next is just a push so that our request moves to the next thing which sholud be executed.
+
+--> url me jab bhi aapke pass ek aisa pattern ho 
+/profile/:username
+to : colons wali chiz ko hum params kahte hai.
+
+# Route parameters : 
+--> to make any route dynamic you can use : at the aplce where you want to make it dynamic, and to access there value use req.params.writers
+Eg : /author/books/issued/bikash
+    /author/books/issued/manish
+    /author/books/issued/ankit
+    /author/books/issued/abhishek
+
+    /author/books/issued/:writers
+
+# Template Engines : 
+--> html k pass super powers nhi hai calculation karne ki.
+--> ejs is html with super powers which means you have option to perform opertion.
+--> ye ek style of markup se convert karke apko html deta hai.
+
+
+# EJS setup : 
+--> ejs install npm i ejs
+--> configure ejs
+    app.set("view engine", "ejs");
+--> ek views folder banao
+--> usmein ejs file banao
+--> send ki jagah render karo : render karte wakt make sure aap views folder k andar wali hee koi file ka name likhein, aur render function me .ejs mention na kare.
+
+# Static file setup karne k liye : 
+--> create a folder called public
+-->create three folder inside it images stylesheet javascript
+--> configure the express static in script.js file
+--> understandthe path
+
+# Error handling : 
+function errorHandler (err, req, res, next) {
+  if (res.headersSent) {
+    return next(err)
+  }
+  res.status(500)
+  res.render('error', { error: err })
+}
+
+Q. humein ek route banana hai, jismein ek page show ho aur waha par ek css use karta hua page dikhe.
+
+# Express Generator : 
+--> express generator ek folder bana kar deta hai, jiska matlab aapko khudse folder mhi banana hai, to express gen sare files ko is folder me dal kar dega.
+
+--> humlogo ko kafi sara kam karna padta hai express setup karne me iska matlab har bar jab hum naya project banayenge to har bar fir se utna hee kaam karna padega, matlab ki pura code likho and sab kuchh setup karo, is time ko bacha sakte ho with the help of express generator, use express generator and it will make the folder structure for you and it will also write the basic code for project.
+
+# Steps to use express generator : 
+--> sabse pahle jivan me ek bar laptop me install karo globally.
+--> npm install express-generator -g
+
+--> to create new app anywhere : 
+-> open cmd move to desktop
+-> create new app:
+-> express appname --view==ejs
+
+-> now use two commands
+1> cd appname
+2> npm i
+3> open it on vs code
+
+## Mongodb : 
+--> data bse do tarah k hote hai 
+1. relational
+2. non-relational
+
+ ###   CODESIDE                                        MONGODB SIDE
+
+      1. DB Setup                                      1. DB Formation
+      2. Model                                         2. Collection
+      3. Schema                                        3. Documents
+
+--> har naye app ka data store hoga storage me, par usey directly rakhne ki jagah ek container mein rakhega, us container mein sirf us app ka data ayega.
+
+--> ek app ka pura data kehlta hai databse
+--> ek app mein variety of data hota hai poora data hota app ka hee hai, par us data ka sub caregory kehlata hai Collection
+--> collection ka matlab ki bola users ki data, ek user pe baat kri to hua Documents
+
+// install Mongodb
+// install mongoosejs
+//require and setup connection
+//make Schema
+//create model and export.
+
+--> schema matlab aapko ye batana bane wala har document mein 
+
+## Cookies and Session :
+--> Cookies : jab data frontend/browser/client par save hota hai to usse cookies kehte hai. aur secured kam hota hai.
+--> session : jab data server par save hota hai to usse session  kehte hai.
+aur ye secured hota hai.
+
+create : 
+--> req.session.koibhiname = koibhivalue; //true or false
+Read : 
+--> req.session.koibhiname
+DELETE : 
+--> req.session.destroy
+
+#COOKIE : 
+--> cookie setup : 
+res.cookie("name", "value");
+--> cookie reading : 
+req.cookies.name
+--> cookie deleteion
+res.clearCookie("name")
+
+# Flash Messages : 
+--> jab bhi aap kisi ejs page to dekhte hai waha par aapko kisi prakar ka koi information dena hai, wah kehalta hai flash Messages, they are more like good looking alerts, warning and description.
+
+--> install connect-flash
+--> make sure you put connect flash in app.use function
+--> kisi bhi route me flash create karna hai 
+--> kisi bhi dosre route me app.use ko chalane ka try karein.
+--> aap coonect flash ko use nhi kar sakte hai without express session
+
+--> humlog chahte hai ki jab hum kisi route par jaye jaise ki /failed us route par ek flash Messages bane aur wo flash Messages hum logo ko / route par dikhe ejs me.
+--> flash Messages ka matlab server ka kisi route mein koi data banana and us data ko doosre route kar pana.
+
+## RegEx :
+--> ^ is ka matlab hota haio shuruaat
+--> $ is ka matlab hota hai ant
+
+# Authentication and Authorization : 
+
+1. install these packages.
+--> npm i passport passport-local passport-local-mongoose mongoose 
+express-session 
+
+--> Write app.js code first in aap.js file and write it after view engine and before logger
+--> setup users.js then properly
+--> in index.js try register first and then other code as well
