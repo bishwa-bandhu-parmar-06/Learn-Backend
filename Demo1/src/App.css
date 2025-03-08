@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#name {
+  color: red;
+}
+
+#sub-btn {
+  height: 50px;
+  width: 100px;
+  border-radius: 5px;
+  color: white;
+  background-color: red;
+  font-size: 20px;
+  border: 2px solid red;
+}
+
+#sub-btn:hover {
+  color: red;
+  background-color: white;
+  border-color: red;
+}
+
+#main {
+  height: 50px;
+  width: 100%;
+  background-color: red;
+  color: gold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 10px;
+}
+#div1 {
+  width: 60%;
+}
+
+#main h2:hover {
+  text-decoration: underline;
+  text-decoration-color: gold;
+  cursor: pointer;
+}
+
+#main #div2 {
+  width: 40%;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+#div2 h4:hover {
+  text-decoration: underline;
+  text-decoration-color: gold;
+  cursor: pointer;
+}

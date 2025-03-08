@@ -1,0 +1,189 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospitals Registerations</title>
+</head>
+<body>
+    <main>
+        <section class="form-section">
+          <div class="form-wrapper">
+            <h1 class="title">Sign up</h1>
+            <form class="form" action="/add" method="post">
+              <div class="form-row">
+                <div class="form-group">
+                  <label>
+                    <span class="sr-only">Hospitals Name</span>
+                    <input type="text" placeholder="Full Name" class="form-input" name="name" required>
+                  </label>
+                </div>
+                <div class="form-group">
+                  <label>
+                    <span class="sr-only">Address</span>
+                    <input id="last-name" type="text" placeholder="Address" class="form-input" name="address" required>
+                  </label>
+                </div>
+              </div>
+              <div class="form-group">
+                <label>
+                  <span class="sr-only">Email address</span>
+                  <input type="email" placeholder="Email" class="form-input" name="email" required>
+                </label>
+              </div>
+              <div class="form-group">
+                <label>
+                  <span class="sr-only">Contact</span>
+                  <input type="text" placeholder="Contact" class="form-input" name="contact" required>
+                </label>
+              </div>
+              <div class="form-group">
+                <input type="submit" value="Submit" class="form-submit">
+              </div>
+    
+              <footer class="form-footer">
+                  <div>
+                    <a href="#" class="form-link">Forgot password?</a>
+                  </div>
+                  <div>
+                    Already have an account?
+                    <a href="" class="form-link">Log in</a>
+                  </div>
+              </footer>
+            </form>
+          </div>
+        </section>
+      </main>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hospital Registration</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    .container {
+      width: 50%;
+      margin: 50px auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #4caf50;
+      color: #fff;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Hospital Registration</h2>
+    <form id="hospitalForm" action="/add" method="post">
+      <label for="gstin">GSTIN:</label>
+      <input type="text" id="gstin" name="gstin" required>
+
+      <label for="licenseNumber">License Number:</label>
+      <input type="text" id="licenseNumber" name="licenseNumber" required>
+
+      <label for="certifiedProofDocument">Certified Proof Document:</label>
+      <input type="text" id="certifiedProofDocument" name="certifiedProofDocument" required>
+
+      <label for="hospitalName">Hospital Name:</label>
+      <input type="text" id="hospitalName" name="hospitalName" required>
+
+      <label for="address">Address:</label>
+      <input type="text" id="street" name="street" placeholder="Street" required>
+      <input type="text" id="city" name="city" placeholder="City" required>
+      <input type="text" id="state" name="state" placeholder="State" required>
+      <input type="text" id="zip" name="zip" placeholder="ZIP" required>
+
+      <label for="directors">Directors:</label>
+      <input type="text" id="directorName" name="directorName" placeholder="Director's Name" required>
+      <input type="text" id="directorContact" name="directorContact" placeholder="Director's Contact Number" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="contactNumber">Contact Number:</label>
+      <input type="text" id="contactNumber" name="contactNumber" required>
+
+      <button type="submit">Register Hospital</button>
+    </form>
+  </div>
+
+  <!-- <script>
+    document.getElementById('hospitalForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const formData = {
+      gstin: document.getElementById('gstin').value,
+      licenseNumber: document.getElementById('licenseNumber').value,
+      certifiedProofDocument: document.getElementById('certifiedProofDocument').value,
+      hospitalName: document.getElementById('hospitalName').value,
+      address: {
+        street: document.getElementById('street').value,
+        city: document.getElementById('city').value,
+        state: document.getElementById('state').value,
+        zip: document.getElementById('zip').value,
+      },
+      directors: [{
+        name: document.getElementById('directorName').value,
+        contactNumber: document.getElementById('directorContact').value,
+      }],
+      email: document.getElementById('email').value,
+      contactNumber: document.getElementById('contactNumber').value,
+    };
+
+    // Send formData to the server using Fetch API
+    fetch('/register-hospital', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData),
+    })
+    .then(response => response.json())
+    .then(data => {
+      console.log('Server response:', data);
+      // Handle the response as needed
+    })
+    .catch(error => {
+      console.error('Error sending data to server:', error);
+      // Handle errors
+    });
+  });
+  </script> -->
+</body>
+</html>

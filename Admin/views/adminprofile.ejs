@@ -1,0 +1,48 @@
+<!-- adminprofile.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Profile</title>
+    <!-- Add your CSS links or styles here -->
+</head>
+
+<body>
+    <a href="/">
+        <button>Logout</button>
+    </a>
+    <h1>Welcome, <%= user.username %>!</h1>
+
+    <h2>Unapproved Hospitals</h2>
+    <ul>
+        <% unapprovedHospitals.forEach((hospital) => { %>
+            <li>
+                <%= hospital.hospitalName %> - <%= hospital.email %>
+                <form method="post" action="/approve-hospital/<%= hospital._id %>">
+                    <button type="submit">Approve</button>
+                </form>
+            </li>
+        <% }); %>
+    </ul>
+
+    <h2>Hospital Data</h2>
+    <ul>
+        <% hospitalData.forEach((data) => { %>
+            <li>
+                <%= data.hospital.hospitalName %> - <%= data.hospital.email %>
+                <br>
+                Registered Users: <%= data.userCount %>
+            </li>
+        <% }); %>
+    </ul>
+
+    <!-- Add other content or sections as needed -->
+
+    <!-- Add your JavaScript or script tags here -->
+
+</body>
+
+</html>

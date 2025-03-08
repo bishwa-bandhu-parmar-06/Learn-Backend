@@ -1,0 +1,228 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+nav {
+  height: 140px;
+  width: 100%;
+  /* background-color: #B2DFB1; */
+}
+
+/*########################### MENU UP START HERE ####################################*/
+
+.menu-up {
+  height: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #5FBDFF;
+}
+.logo {
+  height: 60px;
+  width: 200px;
+  /* margin-left: 30px; */
+  /* background-color: wheat; */
+}
+.logo img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+.search-section {
+  height: 50px;
+  width: 500px;
+  margin-left: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: white; */
+  border-radius: 25px 25px 25px 25px;
+}
+.search-section input[type=text] {
+  width: 90%;
+  height: 50px;
+  padding: 20px;
+  border: none;
+  outline: none;
+  border-left: 2px solid black;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  border-radius: 25px 0px 0px 25px;
+}
+input::placeholder {
+  font-weight: bold;
+  opacity: 0.5;
+  color: gray;
+}
+
+.search-section .search-btn {
+  height: 50px;
+  width: calc(80 - 90%);
+  padding: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-right: 2px solid black;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  border-radius: 0px 25px 25px 0px;
+  background-color: #fff;
+}
+.search-section .search-btn i {
+  margin-right: 10px;
+}
+
+.social {
+  height: 50px;
+  width: 300px;
+  cursor: pointer;
+  /* background-color: yellow; */
+}
+.social ul {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.social ul li {
+  list-style: none;
+}
+.social ul li a{
+  height: 50px;
+  width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.social a {
+  text-decoration: none;
+  font-size: 20px;
+}
+.social ul li a i {
+  color: #000;
+
+}
+.social li:hover {
+  background-color: #96EFFF;
+  border-radius: 10px;
+}
+
+/*########################### MENU UP ENDS HERE ####################################*/
+
+
+/*########################### MENU DOWN START HERE ####################################*/
+
+.menu-down {
+  height: 60px;
+  width: 100%;
+  background-color: #5FBDFF;
+  font-weight: 500;
+
+}
+
+.menu-down .menu-list {
+  height: 100%;
+  width: 100%;
+}
+.menu-down .menu-list ul {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.menu-down .menu-list ul li {
+  cursor: pointer;
+  list-style: none;
+  height: 80%;
+  width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  /* background-color: chartreuse;
+  border-bottom: 5px solid black;
+  border-bottom-width: 0px; */
+  transition: all 0.5s ease-in-out;
+}
+.menu-down .menu-list ul li:hover {
+  background-color: #96EFFF;
+  cursor: pointer;
+  border-radius: 10px;
+  /* border-bottom-width: 100%; */
+}
+
+.menu-down .menu-list ul li a {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu-down .menu-list ul li a i {
+  margin-right: 5px;
+  font-size: 15px;
+}
+
+/*########################### MENU DOWN ENDS HERE ####################################*/
+
+
+/*########################### HERO SECTIONS STARTS HERE ####################################*/
+
+.slider-container {
+  height: 500px;
+  width: 100%;
+  overflow: hidden;
+  background-color: #B2DFB1;
+}
+.slider {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  transition: transform 0.8s ease-in-out;
+}
+.slide {
+  flex: 0 0 100%;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+.slider-controls .prev-slide {
+  position: absolute;
+  bottom: 40%;
+  left: 0%;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: #5FBDFF;
+}
+.slider-controls .prev-slide:hover {
+  background-color: #96EFFF;
+}
+.slider-controls .next-slide {
+  position: absolute;
+  bottom: 40%;
+  right: 0%;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: #5FBDFF;
+}
+.slider-controls .next-slide:hover {
+  background-color: #96EFFF;
+}
+
+.slide.active {
+  transform: translateX(0);
+  transition: all 0.5s ease-in-out;
+}
+
+
+/*########################### HERO SECTIONS ENDS HERE ####################################*/
