@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BhojanQR - Order Food</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #FAFAFA;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            background-color: #FF7F3F;
+            color: #FAFAFA;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+        nav ul li {
+            display: inline;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #FAFAFA;
+            font-size: 18px;
+        }
+        .login-btn {
+            background-color: #FAFAFA;
+            color: #FF7F3F;
+            border: none;
+            padding: 8px 15px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        .banner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 50px;
+            background-color: #FAFAFA;
+        }
+        .text-content h1 {
+            color: #2E7D32;
+            font-size: 36px;
+        }
+        .text-content p {
+            font-size: 18px;
+        }
+        .get-started {
+            background-color: #FF7F3F;
+            color: #FAFAFA;
+            padding: 10px 20px;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .features {
+            display: flex;
+            justify-content: space-around;
+            padding: 50px;
+            background-color: #FAFAFA;
+        }
+        .feature {
+            text-align: center;
+        }
+        .feature img {
+            width: 80px;
+            height: 80px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #2E7D32;
+            color: #FAFAFA;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">BhojanQR</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><button class="login-btn">Login</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Banner -->
+    <section class="banner">
+        <div class="text-content">
+            <h1>Order Food with QR Code</h1>
+            <p>Scan the QR code to view menu and place your order.</p>
+            <button class="get-started">Get Started</button>
+        </div>
+        <div class="image-content">
+            <img src="qr-banner.svg" alt="QR Code Scanning">
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features">
+        <div class="feature">
+            <img src="scan-qr.svg" alt="Scan QR Code">
+            <p>Scan QR Code</p>
+        </div>
+        <div class="feature">
+            <img src="view-menu.svg" alt="View Menu">
+            <p>View Menu</p>
+        </div>
+        <div class="feature">
+            <img src="enjoy-meal.svg" alt="Enjoy Meal">
+            <p>Enjoy Your Meal</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 BhojanQR. All rights reserved.</p>
+    </footer>
+</body>
+</html>
